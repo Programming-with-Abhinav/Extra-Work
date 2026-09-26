@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vote checker</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				height: 100vh;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			main {
+				height: 400px;
+				width: 400px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(353deg, rgb(3, 22, 78), rgb(83, 234, 237));
+				gap: 15px;
+				border: none;
+				border-radius: 16px;
+				box-shadow: 15px 15px 20px 5px;
+			}
+			.userVote-box {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				gap: 10px;
+			}
+			.userVote-box h1 {
+				font-size: 45px;
+				font-weight: 650;
+				color: whitesmoke;
+			}
+			.userInput {
+				padding: 13px 26px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+			}
+
+			.userInput h3 {
+				font-size: 25px;
+				font-weight: 600;
+				color: whitesmoke;
+			}
+
+			#userVote {
+				height: 30px;
+				text-align: center;
+				font-size: 14px;
+				font-weight: 500;
+				color: black;
+				border: none;
+				outline: none;
+				border-radius: 8px;
+				box-shadow: 15px 10px 15px;
+			}
+
+			button {
+				padding: 12px;
+				border: none;
+				border-radius: 16px;
+				text-align: center;
+				font-size: 14px;
+				font-weight: 800;
+				color: rgba(35, 35, 233, 0.784);
+			}
+
+			.output {
+				font-size: 25px;
+				font-weight: bold;
+				text-align: center;
+				min-height: 25px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="userVote-box">
+				<h1>Fill Your age</h1>
+				<div class="userInput">
+					<h3>Age : </h3>
+					<input type="text" id="userVote" placeholder="Enter Your age" />
+					<button class="submit">Enter</button>
+				</div>
+				<p class="output"></p>
+			</div>
+		</main>
+		<script>
+			const submitButton = document.querySelector(".submit");
+			const ageInput = document.getElementById("userVote");
+			const outputText = document.querySelector(".output");
+
+			submitButton.addEventListener("click", () => {
+				const age = parseInt(ageInput.value);
+				if (isNaN(age) || age <= 0) {
+					outputText.textContent = "Please enter a valid age.";
+					outputText.style.color = "red";
+				} else if (age >= 18) {
+					outputText.textContent = "You are eligible to vote";
+					outputText.style.color = "lightgreen";
+				} else {
+					outputText.textContent = "You are not old enough to vote yet.";
+					outputText.style.color = "orange";
+				}
+			});
+		</script>
+	</body>
+</html>
