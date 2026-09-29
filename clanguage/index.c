@@ -1,10 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
+#define BORN 2000
+/*
+ * File: age.c
+ * Description: Program to print the age
+ * Author: You
+ */
 
-int main(){
-    int a;
-    printf("Enter value of cube :");
-    scanf("%d",&a);
-   
-    printf("Area of squ : %d", a*a*a);
-    return 0;
+int main()
+{
+   int age = 20;
+   printf("before age = %d\n",age);
+   age = 25;
+   printf("after = %d",age);
+   return 0;
 }

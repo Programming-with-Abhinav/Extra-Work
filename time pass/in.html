@@ -3,48 +3,118 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-        <link rel="stylesheet" href="style.css">
+		<title>Fun.io - Registration</title>
+		<!-- CSS  -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- Font Awesome  -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+			integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
 	</head>
 	<body>
-		<form action="submit_page.html" method="post" class="alignment">
-                <h1>From</h1>
-                <h2>Basic Information</h2>
-				<div class="userName">
-                    <p>Name: </p>
-					<input type="text" id="userID" placeholder="Enter Your Name" />
-				</div>
-				<div class="userPhone">
-                    <p>Phone Number: </p>
-					<input type="tel" id="userNumber" placeholder="Enter Your Number" />
-				</div>
-				<div class="userBrith">
-                    <p>DOB: </p>
-					<input type="date" id="userBrith" placeholder="Enter Your DOB" />
-				</div>
+		<!-- ================= HEADER ================= -->
+		<header>
+			<!-- Logo  -->
+			<div class="logo">
+				<i class="fa-brands fa-angellist"></i>
+				<h1>Fun.io</h1>
+			</div>
 
-				<div class="userFather">
-                    <p>Father Name</p>
-					<input
-						type="text"
-						id="userFather"
-						placeholder="Enter Your Father Name" />
-				</div>
-				<div class="userMother">
-                    <p>Mother Father</p>
-					<input
-						type="text"
-						id="userMother"
-						placeholder="Enter Your Mother Name" />
-				</div>
+			<!-- Navigation  -->
+			<nav>
+				<div class="navbar">
+					<div class="nav-item">
+						<i class="fa-regular fa-house"></i>
+						<a href="home.html">Home</a>
+					</div>
 
-                <div class="userFather-contact">
-                    <p>Father's Phone</p>
-					<input
-						type="text"
-						id="userFather"
-						placeholder="Enter Your Father Phone Number" />
+					<!-- SingUp  -->
+					<div class="nav-item">
+						<i class="fa-solid fa-arrow-right-to-bracket"></i>
+						<a href="SingUp.html">SingUp</a>
+					</div>
+
+					<!-- Login -->
+					<div class="nav-item">
+						<i class="fa-solid fa-user-lock"></i>
+						<a href="Login.html">Login</a>
+					</div>
+
+					<!-- About Us -->
+					<div class="nav-item">
+						<i class="fa-solid fa-circle-info"></i>
+						<a href="AboutUs.html">AboutUs</a>
+					</div>
+
+					<!-- More Games  -->
+					<div class="nav-item">
+						<a href="MoreGames.html">More Games</a>
+						<i class="fa-solid fa-plus"></i>
+					</div>
+
+					<!-- More Options -->
+					<div class="nav-item contact">
+						<i class="fa-solid fa-ellipsis-vertical"></i>
+					</div>
 				</div>
-		</form>
+			</nav>
+			<!-- Search  -->
+			<div class="search-hloder">
+				<i class="fa-solid fa-magnifying-glass"></i>
+				<input
+					type="text"
+					id="searchUser"
+					name="searchGame"
+					placeholder="Find Your Fav Game..." />
+			</div>
+		</header>
+
+		<main>
+			<form action="submit_page.html" method="post" class="alignment">
+				
+				<div class="main-box">
+					<h1>From</h1>
+					<h2>Basic Information</h2>
+					<div class="userName">
+						<p>Name: </p>
+						<input type="text" id="userID" placeholder="Enter Your Name" />
+					</div>
+					<div class="userPhone">
+						<p>Phone Number: </p>
+						<input type="tel" id="userNumber" placeholder="Enter Your Number" />
+					</div>
+					<div class="userBrith">
+						<p>DOB: </p>
+						<input type="date" id="userBrith" placeholder="Enter Your DOB" />
+					</div>
+
+					<div class="userFather">
+						<p>Father Name</p>
+						<input
+							type="text"
+							id="userFather"
+							placeholder="Enter Your Father Name" />
+					</div>
+					<div class="userMother">
+						<p>Mother Father</p>
+						<input
+							type="text"
+							id="userMother"
+							placeholder="Enter Your Mother Name" />
+					</div>
+
+					<div class="userFather-contact">
+						<p>Father's Phone</p>
+						<input
+							type="text"
+							id="userFather"
+							placeholder="Enter Your Father Phone Number" />
+					</div>
+				</div>
+			</form>
+		</main>
 	</body>
 </html>
